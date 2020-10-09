@@ -27,6 +27,7 @@ spec:
         prometheus.io/port: "9797"
       labels:
         app: podinfo
+        app: flux
     spec:
       initContainers:
       - name: init
@@ -35,7 +36,7 @@ spec:
         - sleep
         - "1"
       containers:
-      - name: podinfod
+      - name: podinfo
         image: stefanprodan/podinfo:3.1.5
         imagePullPolicy: IfNotPresent
         ports:
