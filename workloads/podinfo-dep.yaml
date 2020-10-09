@@ -6,6 +6,7 @@ metadata:
   namespace: demo
   labels:
     app: podinfo
+    app: flux
   annotations:
     fluxcd.io/automated: "true"
     fluxcd.io/tag.init: regex:^3.10.*
@@ -18,6 +19,7 @@ spec:
   selector:
     matchLabels:
       app: podinfo
+      app: flux
   template:
     metadata:
       annotations:
