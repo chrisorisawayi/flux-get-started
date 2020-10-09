@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: podinfo
+  namespace: default
+  labels:
+    app: podinfodemo
+spec:
+  type: ClusterIP
+  selector:
+    app: podinfodemo
+  ports:
+  - name: http
+    port: 9898
+    protocol: TCP
+    targetPort: http
