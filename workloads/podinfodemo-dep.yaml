@@ -25,6 +25,7 @@ spec:
         prometheus.io/port: "9797"
       labels:
         app: podinfodemo
+        name: flux
     spec:
       initContainers:
       - name: init
